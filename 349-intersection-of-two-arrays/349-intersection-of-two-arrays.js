@@ -5,11 +5,12 @@
  */
 var intersection = function(nums1, nums2) {
    let intersect = [];
+    nums1 = [...new Set(nums1)];
    nums1.forEach(num => {
       if(nums2.includes(num)) {
          intersect.push(num);
       }
    })
 
-   return [...new Set(intersect)];
+   return (intersect);
 };
